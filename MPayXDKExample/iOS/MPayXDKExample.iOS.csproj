@@ -129,6 +129,7 @@
     <Compile Include="AppDelegate.cs" />
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\custom.css" />
     <BundleResource Include="Resources\molpay-mobile-xdk-www\index.html" />
     <BundleResource Include="Resources\molpay-mobile-xdk-www\fonts\FontAwesome.otf" />
     <BundleResource Include="Resources\molpay-mobile-xdk-www\fonts\fontawesome-webfont.eot" />
@@ -137,9 +138,9 @@
     <BundleResource Include="Resources\molpay-mobile-xdk-www\fonts\fontawesome-webfont.woff" />
     <BundleResource Include="Resources\molpay-mobile-xdk-www\fonts\fontawesome-webfont.woff2" />
     <BundleResource Include="Resources\molpay-mobile-xdk-www\images\poweredByMOLPay.png" />
-    <BundleResource Include="Resources\molpay-mobile-xdk-www\scripts\scripts.7cc52ec7.js" />
+    <BundleResource Include="Resources\molpay-mobile-xdk-www\scripts\scripts.c1ee41e5.js" />
     <BundleResource Include="Resources\molpay-mobile-xdk-www\scripts\vendor.36ed7472.js" />
-    <BundleResource Include="Resources\molpay-mobile-xdk-www\styles\main.2cc61de4.css" />
+    <BundleResource Include="Resources\molpay-mobile-xdk-www\styles\main.d7816846.css" />
     <BundleResource Include="Resources\molpay-mobile-xdk-www\styles\vendor.34eb91d2.css" />
     <BundleResource Include="Resources\molpay-mobile-xdk-www\views\alertmodal.html" />
     <BundleResource Include="Resources\molpay-mobile-xdk-www\views\banklistmodal.html" />
@@ -150,7 +151,6 @@
     <BundleResource Include="Resources\molpay-mobile-xdk-www\views\main.html" />
     <BundleResource Include="Resources\molpay-mobile-xdk-www\views\paymentinfo.html" />
     <BundleResource Include="Resources\molpay-mobile-xdk-www\views\receipt.html" />
-    <BundleResource Include="Resources\custom.css" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.0.1.6495\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.0.1.6495\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

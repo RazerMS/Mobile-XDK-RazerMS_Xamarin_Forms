@@ -117,6 +117,18 @@ namespace MOLPayXDK
 				this.molpayUI.Eval(evaljs);
 			}
 
+			else 
+			{
+				// nativeWebRequestUrlUpdatesOnFinishLoad
+				var nativeWebRequestUrlUpdatesOnFinishLoadDict = new Dictionary<string, object>
+				{
+					{ "requestPath", url }
+				};
+				string nativeWebRequestUrlUpdatesOnFinishLoadJSON = Newtonsoft.Json.JsonConvert.SerializeObject(nativeWebRequestUrlUpdatesOnFinishLoadDict);
+
+				this.mainUI.Eval(string.Format("nativeWebRequestUrlUpdatesOnFinishLoad({0})", nativeWebRequestUrlUpdatesOnFinishLoadJSON));
+			}
+
 			//else if (url.Contains(molpayresulturl))
 			//{
 			//	if (isInternalDebugging)
@@ -264,6 +276,7 @@ namespace MOLPayXDK
 					System.Diagnostics.Debug.WriteLine("+++++++++++ mprunscriptonpopup evaljs = {0}", evaljs);
 				}
 
+				this.molpayUI.IsVisible = false;
 				this.molpayUI.Eval(evaljs);
 			}
 

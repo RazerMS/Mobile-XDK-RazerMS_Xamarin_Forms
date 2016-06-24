@@ -47,19 +47,19 @@ namespace MPayXDKExample
 			{
 				// ------- SDK required data ----------
 				{ "mp_amount", "1.10" }, // Mandatory String. A value more than '1.00'
-				{ "mp_username", "molpayapi" }, // Mandatory String. Values obtained from MOLPay
-				{ "mp_password", "*M0Lp4y4p1!*" }, // Mandatory String. Values obtained from MOLPay
-				{ "mp_merchant_ID", "molpaymerchant" }, // Mandatory String. Values obtained from MOLPay
-				{ "mp_app_name", "wilwe_makan2" }, // Mandatory String. Values obtained from MOLPay
-				{ "mp_order_ID", "XAM001" }, // Mandatory String. Payment values
+				{ "mp_username", "" }, // Mandatory String. Values obtained from MOLPay
+				{ "mp_password", "" }, // Mandatory String. Values obtained from MOLPay
+				{ "mp_merchant_ID", "" }, // Mandatory String. Values obtained from MOLPay
+				{ "mp_app_name", "" }, // Mandatory String. Values obtained from MOLPay
+				{ "mp_order_ID", "" }, // Mandatory String. Payment values
 				{ "mp_currency", "MYR" }, // Mandatory String. Payment values
 				{ "mp_country", "MY" }, // Mandatory String. Payment values
-				{ "mp_verification_key", "501c4f508cf1c3f486f4f5c820591f41" }, // Mandatory String. Values obtained from MOLPay
+				{ "mp_verification_key", "" }, // Mandatory String. Values obtained from MOLPay
 				{ "mp_channel", "" }, // Optional String.
-				{ "mp_bill_name", "Developer" }, // Optional String.
-				{ "mp_bill_email", "clewlb@gmail.com" }, // Optional String.
-				{ "mp_bill_mobile", "+12345678" }, // Optional String.
-				{ "mp_bill_description", "Test payment" }, // Optional String.
+				{ "mp_bill_name", "" }, // Optional String.
+				{ "mp_bill_email", "" }, // Optional String.
+				{ "mp_bill_mobile", "" }, // Optional String.
+				{ "mp_bill_description", "" }, // Optional String.
 				{ "mp_channel_editing", false }, // Optional String.
 				{ "mp_editing_enabled", false }, // Optional String.
 				{ "mp_transaction_id", "" }, // For transaction request use only, do not use this on payment process
