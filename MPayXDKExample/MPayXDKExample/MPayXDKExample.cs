@@ -69,7 +69,8 @@ namespace MPayXDKExample
 				//{ "mp_bin_lock_err_msg", "Only UOB allowed" }, // Optional for credit card BIN restrictions
 				//{ "mp_is_escrow", "" }, // Optional for Escrow, put "1" to enable escrow
 				//{ "mp_filter", "" }, // Optional for debit card payment only 
-				//{ "mp_custom_css_url", System.IO.Path.Combine (assetsPath, "custom.css") } // Optional for custom UI
+				//{ "mp_custom_css_url", System.IO.Path.Combine (assetsPath, "custom.css") }, // Optional for custom UI
+				//{ "mp_tcctype", "" } // Optional, credit card transaction type, set "AUTH" to authorize the transaction
 			};
 
 			this.molpay = new MOLPay(assetsPath, paymentDetails, MolpayCallback);
