@@ -70,7 +70,8 @@ namespace MPayXDKExample
 				//{ "mp_is_escrow", "" }, // Optional for Escrow, put "1" to enable escrow
 				//{ "mp_filter", "" }, // Optional for debit card payment only 
 				//{ "mp_custom_css_url", System.IO.Path.Combine (assetsPath, "custom.css") }, // Optional for custom UI
-				//{ "mp_tcctype", "" } // Optional, credit card transaction type, set "AUTH" to authorize the transaction
+				//{ "mp_tcctype", "" }, // Optional, credit card transaction type, set "AUTH" to authorize the transaction
+				//{ "mp_is_recurring", false } // Optional, set true to process this transaction through the recurring api, please refer the MOLPay Recurring API pdf
 			};
 
 			this.molpay = new MOLPay(assetsPath, paymentDetails, MolpayCallback);
