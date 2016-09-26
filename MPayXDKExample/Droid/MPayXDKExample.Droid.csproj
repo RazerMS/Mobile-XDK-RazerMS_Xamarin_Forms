@@ -91,6 +91,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MOLPayExtensionForAndroid.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -109,18 +110,19 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\custom.css" />
+    <AndroidAsset Include="Assets\molpay-mobile-xdk-www\index.html" />
     <AndroidAsset Include="Assets\molpay-mobile-xdk-www\fonts\FontAwesome.otf" />
     <AndroidAsset Include="Assets\molpay-mobile-xdk-www\fonts\fontawesome-webfont.eot" />
     <AndroidAsset Include="Assets\molpay-mobile-xdk-www\fonts\fontawesome-webfont.svg" />
     <AndroidAsset Include="Assets\molpay-mobile-xdk-www\fonts\fontawesome-webfont.ttf" />
     <AndroidAsset Include="Assets\molpay-mobile-xdk-www\fonts\fontawesome-webfont.woff" />
     <AndroidAsset Include="Assets\molpay-mobile-xdk-www\fonts\fontawesome-webfont.woff2" />
+    <AndroidAsset Include="Assets\molpay-mobile-xdk-www\images\ImageUnavailable.png" />
     <AndroidAsset Include="Assets\molpay-mobile-xdk-www\images\poweredByMOLPay.png" />
-    <AndroidAsset Include="Assets\molpay-mobile-xdk-www\scripts\scripts.5df0fc73.js" />
-    <AndroidAsset Include="Assets\molpay-mobile-xdk-www\scripts\vendor.5c22674a.js" />
-    <AndroidAsset Include="Assets\molpay-mobile-xdk-www\styles\main.d7816846.css" />
+    <AndroidAsset Include="Assets\molpay-mobile-xdk-www\scripts\scripts.2c26c95c.js" />
+    <AndroidAsset Include="Assets\molpay-mobile-xdk-www\scripts\vendor.f206a627.js" />
+    <AndroidAsset Include="Assets\molpay-mobile-xdk-www\styles\main.d7e0b867.css" />
     <AndroidAsset Include="Assets\molpay-mobile-xdk-www\styles\vendor.34eb91d2.css" />
-    <AndroidAsset Include="Assets\molpay-mobile-xdk-www\index.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

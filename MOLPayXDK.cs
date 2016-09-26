@@ -5,8 +5,15 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using System.Text;
 
-namespace MOLPayXDK
+namespace MPayXDKExample //Update to your project namespace accordingly
 {
+	public interface MOLPayExtension
+	{
+		String GetAssetPath();
+		void saveImageToDevice(String base64ImageString, String filename);
+		void SetMOLPayContext(Object mpActivity);
+	}
+
 	public class MOLPay : AbsoluteLayout
 	{ 
 		// deploy
@@ -18,6 +25,7 @@ namespace MOLPayXDK
 		private const string mptransactionresults = "mptransactionresults://";
 		private const string mpcloseallwindows = "mpcloseallwindows://";
 		private const string mprunscriptonpopup = "mprunscriptonpopup://";
+		private const string mppinstructioncapture = "mppinstructioncapture://";
 		private const string molpayresulturl = "https://www.onlinepayment.com.my/MOLPay/result.php";
 		private const string molpaynbepayurl = "https://www.onlinepayment.com.my/MOLPay/nbepay.php";
 
@@ -278,6 +286,50 @@ namespace MOLPayXDK
 
 				this.molpayUI.IsVisible = false;
 				this.molpayUI.Eval(evaljs);
+			}
+
+			else if (url.Contains(mppinstructioncapture))
+			{
+				// Must stop loading
+				e.Cancel = true;
+
+				if (isInternalDebugging)
+				{
+					System.Diagnostics.Debug.WriteLine("+++++++++++ mppinstructioncapture found");
+				}
+
+				url = url.Replace(mppinstructioncapture, "");
+
+				if (Device.OS == TargetPlatform.iOS)
+				{
+					url = url.Replace("-", "+");
+					url = url.Replace("_", "=");
+				}
+
+				string dataString = Base64Decode(url);
+
+				if (isInternalDebugging)
+				{
+					System.Diagnostics.Debug.WriteLine("+++++++++++ mppinstructioncapture dataString = {0}", dataString);
+				}
+
+				var dataDict = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>> (dataString);
+				
+				System.Diagnostics.Debug.WriteLine ("+++++++++++ mppinstructioncapture, dataDict = {0}", dataDict);
+
+				string base64ImageString;
+				if (!dataDict.TryGetValue("base64ImageUrlData", out base64ImageString))
+				{
+					return;
+				}
+
+				string filename;
+				if (!dataDict.TryGetValue("filename", out filename))
+				{
+					return;
+				}
+
+				DependencyService.Get<MOLPayExtension>().saveImageToDevice(base64ImageString, filename);
 			}
 
 			//var _results = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>> (paymentDetailsJSON);

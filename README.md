@@ -25,9 +25,17 @@ This plugin provides an integrated MOLPay payment module that contains a wrapper
 ## Installation
 
     Step 1 - Import MOLPay modules
-    Add MOLPayXDK.cs into the FORMS project folder
-    For Android, add molpay-mobile-xdk-www into Assets folder, then use Build Action option at all sub files and set as AndroidAsset.
-    For iOS, add molpay-mobile-xdk-www into Resources folder.
+    
+    For the Form App,
+    - Add MOLPayXDK.cs into the FORMS project folder
+    
+    For Android, 
+    - add MOLPayExtensionForAndroid.cs into the FORMS project folder
+    - add molpay-mobile-xdk-www into Assets folder, then use Build Action option at all sub files and set as AndroidAsset.
+    
+    For iOS, 
+    - add MOLPayExtensionForIOS.cs into the FORMS project folder
+    - add molpay-mobile-xdk-www into Resources folder.
     
     Step 2 - Add Package dependancies
     Add Json.NET from Official NuGet Gallery
@@ -36,14 +44,20 @@ This plugin provides an integrated MOLPay payment module that contains a wrapper
     using System.Collections.Generic;
     using MOLPayXDK;
     
-    Step 4 - Add callback function for transaction results,
+    Step 4 - Update Namespace at MOLPayXDK.cs
+    namespace MPayXDKExample //Update to your project namespace accordingly
+    
+    Step 5 - Add callback function for transaction results,
     private void MolpayCallback(string transactionResult) {}
     
-    Step 5 - Implement native assetsPath,
-    LoadApplication (new App ("file:///android_asset/")); (For Android)
-    LoadApplication (new App (NSBundle.MainBundle.BundlePath)); (For iOS)
+    Step 6 - Additional native implementations 
     
-    Step 6 - Add 'NSAppTransportSecurity' > Allow Arbitrary Loads > YES' to the application project info.plist (For iOS)
+    For iOS,
+    - Add 'NSAppTransportSecurity' > Allow Arbitrary Loads > YES' to the application project info.plist (For iOS)
+    
+    For Android,
+    - Add DependencyService.Get<MOLPayExtension>().SetMOLPayContext(this); to the MainActivity.cs after LoadApplication(new App());
+    - Check WriteExternalStorage option at the AndroidManifest.xml's Required Permission
     
     Step 7 - Restore Android platform packages is necessary (Optional) 
 
@@ -130,13 +144,19 @@ This plugin provides an integrated MOLPay payment module that contains a wrapper
         { "mp_tcctype", "" },
     
         // Optional, set true to process this transaction through the recurring api, please refer the MOLPay Recurring API pdf
-        { "mp_is_recurring", false }
+        { "mp_is_recurring", false },
+    
+        // Optional for channels restriction 
+        { "mp_allowed_channels", new string[]{"credit", "credit3"} },
+    
+        // Optional for sandboxed development environment, set boolean value to enable.
+        { "mp_sandbox_mode", true }
     };
 
 ## Start the payment module
 
     Step 1 - Initiate MOLPay payment module, pass in required parameters below
-    var molpay = new MOLPay(assetsPath, paymentDetails, MolpayCallback);
+    var molpay = new MOLPay(DependencyService.Get<MOLPayExtension>().GetAssetPath(), paymentDetails, MolpayCallback);
     
     Step 2 - Add MOLPay payment UI to the main layout
     mainLayout.Children.Add(molpay);

@@ -2,7 +2,6 @@
 
 using Xamarin.Forms;
 using System.Collections.Generic;
-using MOLPayXDK;
 
 namespace MPayXDKExample
 {
@@ -11,7 +10,7 @@ namespace MPayXDKExample
 		private MOLPay molpay = null;
 		private StackLayout mainLayout = null;
 
-		public App(String assetsPath)
+		public App()
 		{
 			var closeButton = new Button();
 			closeButton.BackgroundColor = Color.Gray;
@@ -72,9 +71,11 @@ namespace MPayXDKExample
 				//{ "mp_custom_css_url", System.IO.Path.Combine (assetsPath, "custom.css") }, // Optional for custom UI
 				//{ "mp_tcctype", "" }, // Optional, credit card transaction type, set "AUTH" to authorize the transaction
 				//{ "mp_is_recurring", false } // Optional, set true to process this transaction through the recurring api, please refer the MOLPay Recurring API pdf
+				//{ "mp_allowed_channels", new string[]{"credit", "credit3"} }, // Optional for channels restriction
+				//{ "mp_sandbox_mode", true } // Optional for sandboxed development environment, set boolean value to enable.
 			};
 
-			this.molpay = new MOLPay(assetsPath, paymentDetails, MolpayCallback);
+			this.molpay = new MOLPay(DependencyService.Get<MOLPayExtension>().GetAssetPath(), paymentDetails, MolpayCallback);
 
 			this.mainLayout.Children.Add(this.molpay);
 

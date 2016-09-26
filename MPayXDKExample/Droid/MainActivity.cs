@@ -1,4 +1,6 @@
 ﻿using System;
+using Xamarin.Forms;
+using System.Collections.Generic;
 
 using Android.App;
 using Android.Content;
@@ -22,7 +24,9 @@ namespace MPayXDKExample.Droid
 
 			global::Xamarin.Forms.Forms.Init(this, bundle);
 
-			LoadApplication(new App("file:///android_asset/"));
+			LoadApplication(new App());
+
+			DependencyService.Get<MOLPayExtension>().SetMOLPayContext(this);
 		}
 	}
 }

@@ -14,7 +14,7 @@ namespace MPayXDKExample.iOS
 		{
 			global::Xamarin.Forms.Forms.Init();
 
-			LoadApplication(new App(NSBundle.MainBundle.BundlePath));
+			LoadApplication(new App());
 
 			return base.FinishedLaunching(app, options);
 		}
