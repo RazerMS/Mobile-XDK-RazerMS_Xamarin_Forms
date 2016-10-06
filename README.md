@@ -53,7 +53,8 @@ This plugin provides an integrated MOLPay payment module that contains a wrapper
     Step 6 - Additional native implementations 
     
     For iOS,
-    - Add 'NSAppTransportSecurity' > Allow Arbitrary Loads > YES' to the application project info.plist (For iOS)
+    - Add 'NSAppTransportSecurity' > Allow Arbitrary Loads > YES' to the application project info.plist
+    - Add 'NSPhotoLibraryUsageDescription' > 'Payment images' to the application project info.plist
     
     For Android,
     - Add DependencyService.Get<MOLPayExtension>().SetMOLPayContext(this); to the MainActivity.cs after LoadApplication(new App());
@@ -136,6 +137,9 @@ This plugin provides an integrated MOLPay payment module that contains a wrapper
         // For transaction request use only, do not use this on payment process
         { "mp_transaction_id", "" }, // Optional, provide a valid cash channel transaction id here will display a payment instruction screen.
         { "mp_request_type", "" }, // Optional, set 'Status' when performing a transactionRequest
+        
+        // Optional, use this to customize the UI theme for the payment info screen, the original XDK custom.css file is provided at Example project source for reference and implementation.
+        { "mp_custom_css_url", System.IO.Path.Combine (DependencyService.Get<MOLPayExtension>().GetAssetPath(), "custom.css") },
     
         // Optional, set the token id to nominate a preferred token as the default selection, set "new" to allow new card only
         { "mp_preferred_token", "" },
@@ -150,7 +154,10 @@ This plugin provides an integrated MOLPay payment module that contains a wrapper
         { "mp_allowed_channels", new string[]{"credit", "credit3"} },
     
         // Optional for sandboxed development environment, set boolean value to enable.
-        { "mp_sandbox_mode", true }
+        { "mp_sandbox_mode", true },
+    
+        // Optional, required a valid mp_channel value, this will skip the payment info page and go direct to the payment screen.
+        { "mp_express_mode", true }
     };
 
 ## Start the payment module
