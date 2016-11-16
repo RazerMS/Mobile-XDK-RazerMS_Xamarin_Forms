@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>MPayXDKExample.Droid</RootNamespace>
     <AssemblyName>MPayXDKExample.Droid</AssemblyName>
-    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -119,7 +119,7 @@
     <AndroidAsset Include="Assets\molpay-mobile-xdk-www\fonts\fontawesome-webfont.woff2" />
     <AndroidAsset Include="Assets\molpay-mobile-xdk-www\images\ImageUnavailable.png" />
     <AndroidAsset Include="Assets\molpay-mobile-xdk-www\images\poweredByMOLPay.png" />
-    <AndroidAsset Include="Assets\molpay-mobile-xdk-www\scripts\scripts.47330a76.js" />
+    <AndroidAsset Include="Assets\molpay-mobile-xdk-www\scripts\scripts.0167523c.js" />
     <AndroidAsset Include="Assets\molpay-mobile-xdk-www\scripts\vendor.8ef18f5b.js" />
     <AndroidAsset Include="Assets\molpay-mobile-xdk-www\styles\main.d7e0b867.css" />
     <AndroidAsset Include="Assets\molpay-mobile-xdk-www\styles\vendor.34eb91d2.css" />
