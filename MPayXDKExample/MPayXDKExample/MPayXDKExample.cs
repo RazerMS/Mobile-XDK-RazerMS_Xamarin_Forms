@@ -73,7 +73,9 @@ namespace MPayXDKExample
 				//{ "mp_is_recurring", false } // Optional, set true to process this transaction through the recurring api, please refer the MOLPay Recurring API pdf
 				//{ "mp_allowed_channels", new string[]{"credit", "credit3"} }, // Optional for channels restriction
 				//{ "mp_sandbox_mode", true }, // Optional for sandboxed development environment, set boolean value to enable.
-				//{ "mp_express_mode", true } // Optional, required a valid mp_channel value, this will skip the payment info page and go direct to the payment screen.
+				//{ "mp_express_mode", true }, // Optional, required a valid mp_channel value, this will skip the payment info page and go direct to the payment screen.
+				//{ "mp_advanced_email_validation_enabled", true }, // Optional, enable this for extended email format validation based on W3C standards.
+				//{ "mp_advanced_phone_validation_enabled", true } // Optional, enable this for extended phone format validation based on Google i18n standards.
 			};
 
 			this.molpay = new MOLPay(DependencyService.Get<MOLPayExtension>().GetAssetPath(), paymentDetails, MolpayCallback);
