@@ -26,8 +26,8 @@ namespace MPayXDKExample //Update to your project namespace accordingly
 		private const string mpcloseallwindows = "mpcloseallwindows://";
 		private const string mprunscriptonpopup = "mprunscriptonpopup://";
 		private const string mppinstructioncapture = "mppinstructioncapture://";
-		private const string molpayresulturl = "https://www.onlinepayment.com.my/MOLPay/result.php";
-		private const string molpaynbepayurl = "https://www.onlinepayment.com.my/MOLPay/nbepay.php";
+		private const string mpopenbankwindow = "mpopenbankwindow://";
+		private const string molpaynbepayurl = "MOLPay/nbepay.php";
 
 		private Dictionary<string, object> molpayPaymentDetails = null;
 		private Action<string> TransactionResultCallback = null;
@@ -86,12 +86,8 @@ namespace MPayXDKExample //Update to your project namespace accordingly
 
 			string url = e.Url;
 
-			if (url.Contains(molpayresulturl))
+			if (url != null)
 			{
-				if (isInternalDebugging)
-				{
-					System.Diagnostics.Debug.WriteLine("+++++++++++ molpayresulturl found");
-				}
 				// nativeWebRequestUrlUpdates
 				var nativeWebRequestUrlUpdatesDict = new Dictionary<string, object>
 				{
@@ -124,35 +120,6 @@ namespace MPayXDKExample //Update to your project namespace accordingly
 				string evaljs = "window.open = function (open) { return function (url, name, features) { window.location = url ; return window; };  } (window.open);";
 				this.molpayUI.Eval(evaljs);
 			}
-
-			else 
-			{
-				// nativeWebRequestUrlUpdatesOnFinishLoad
-				var nativeWebRequestUrlUpdatesOnFinishLoadDict = new Dictionary<string, object>
-				{
-					{ "requestPath", url }
-				};
-				string nativeWebRequestUrlUpdatesOnFinishLoadJSON = Newtonsoft.Json.JsonConvert.SerializeObject(nativeWebRequestUrlUpdatesOnFinishLoadDict);
-
-				this.mainUI.Eval(string.Format("nativeWebRequestUrlUpdatesOnFinishLoad({0})", nativeWebRequestUrlUpdatesOnFinishLoadJSON));
-			}
-
-			//else if (url.Contains(molpayresulturl))
-			//{
-			//	if (isInternalDebugging)
-			//	{
-			//		System.Diagnostics.Debug.WriteLine("+++++++++++ molpayresulturl found");
-			//	}
-			//	// nativeWebRequestUrlUpdates
-			//	var nativeWebRequestUrlUpdatesDict = new Dictionary<string, object>
-			//	{
-			//		{ "requestPath", url }
-			//	};
-			//	string nativeWebRequestUrlUpdatesJSON = Newtonsoft.Json.JsonConvert.SerializeObject(nativeWebRequestUrlUpdatesDict);
-
-			//	this.mainUI.Eval(string.Format("nativeWebRequestUrlUpdates({0})", nativeWebRequestUrlUpdatesJSON));
-			//}
-
 		}
 
 		// MainUI handlers
@@ -330,6 +297,47 @@ namespace MPayXDKExample //Update to your project namespace accordingly
 				}
 
 				DependencyService.Get<MOLPayExtension>().saveImageToDevice(base64ImageString, filename);
+			}
+
+			else if (url.Contains(mpopenbankwindow))
+			{
+				// Must stop loading
+				e.Cancel = true;
+
+				if (isInternalDebugging)
+				{
+					System.Diagnostics.Debug.WriteLine("+++++++++++ mpopenbankwindow found");
+				}
+
+				this.molpayUI = new WebView();
+
+				url = url.Replace(mpopenbankwindow, "");
+
+				if (Device.OS == TargetPlatform.iOS)
+				{
+					url = url.Replace("-", "+");
+					url = url.Replace("_", "=");
+				}
+
+				string urlString = Base64Decode(url);
+
+				if (isInternalDebugging)
+				{
+					System.Diagnostics.Debug.WriteLine("+++++++++++ mpopenbankwindow urlString = {0}", urlString);
+				}
+
+				this.molpayUI.Source = new UrlWebViewSource
+				{
+					Url = urlString
+				};
+
+				AbsoluteLayout.SetLayoutBounds(molpayUI, new Rectangle(0, 0, 1, 1));
+				AbsoluteLayout.SetLayoutFlags(molpayUI, AbsoluteLayoutFlags.All);
+
+				this.molpayUI.Navigating += OnMolpayUILoadBegin;
+				this.molpayUI.Navigated += OnMolpayUILoadFinish;
+
+				Children.Add(this.molpayUI);
 			}
 
 			//var _results = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>> (paymentDetailsJSON);
