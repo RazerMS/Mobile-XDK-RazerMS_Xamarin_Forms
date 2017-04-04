@@ -71,8 +71,7 @@ namespace MPayXDKExample //Update to your project namespace accordingly
 
 		public void CloseMolpay()
 		{
-			this.isClosingMolpay = true;
-			this.mainUI.Eval("transactionRequest();");
+			this.mainUI.Eval("closemolpay();");
 		}
 
 		// MolpayUI handlers
