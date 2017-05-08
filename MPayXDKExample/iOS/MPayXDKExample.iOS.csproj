@@ -140,7 +140,7 @@
     <BundleResource Include="Resources\molpay-mobile-xdk-www\fonts\fontawesome-webfont.woff2" />
     <BundleResource Include="Resources\molpay-mobile-xdk-www\images\ImageUnavailable.png" />
     <BundleResource Include="Resources\molpay-mobile-xdk-www\images\poweredByMOLPay.png" />
-    <BundleResource Include="Resources\molpay-mobile-xdk-www\scripts\scripts.03193944.js" />
+    <BundleResource Include="Resources\molpay-mobile-xdk-www\scripts\scripts.69e44cc3.js" />
     <BundleResource Include="Resources\molpay-mobile-xdk-www\scripts\vendor.f57621ed.js" />
     <BundleResource Include="Resources\molpay-mobile-xdk-www\styles\main.88dcea2c.css" />
     <BundleResource Include="Resources\molpay-mobile-xdk-www\styles\vendor.34eb91d2.css" />
