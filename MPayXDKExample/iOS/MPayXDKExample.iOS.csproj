@@ -140,9 +140,9 @@
     <BundleResource Include="Resources\molpay-mobile-xdk-www\fonts\fontawesome-webfont.woff2" />
     <BundleResource Include="Resources\molpay-mobile-xdk-www\images\ImageUnavailable.png" />
     <BundleResource Include="Resources\molpay-mobile-xdk-www\images\poweredByMOLPay.png" />
-    <BundleResource Include="Resources\molpay-mobile-xdk-www\scripts\scripts.7f48ad2d.js" />
-    <BundleResource Include="Resources\molpay-mobile-xdk-www\scripts\vendor.f57621ed.js" />
-    <BundleResource Include="Resources\molpay-mobile-xdk-www\styles\main.88dcea2c.css" />
+    <BundleResource Include="Resources\molpay-mobile-xdk-www\scripts\scripts.ababf5f7.js" />
+    <BundleResource Include="Resources\molpay-mobile-xdk-www\scripts\vendor.631c8d21.js" />
+    <BundleResource Include="Resources\molpay-mobile-xdk-www\styles\main.88e23106.css" />
     <BundleResource Include="Resources\molpay-mobile-xdk-www\styles\vendor.34eb91d2.css" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
