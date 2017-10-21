@@ -144,7 +144,7 @@ namespace MPayXDKExample //Update to your project namespace accordingly
 
 				url = url.Replace(mpopenmolpaywindow, "");
 
-				if (Device.OS == TargetPlatform.iOS)
+				if (Device.RuntimePlatform == Device.iOS)
 				{
 					url = url.Replace("-", "+");
 					url = url.Replace("_", "=");
@@ -183,7 +183,7 @@ namespace MPayXDKExample //Update to your project namespace accordingly
 
 				url = url.Replace(mptransactionresults, "");
 
-				if (Device.OS == TargetPlatform.iOS)
+				if (Device.RuntimePlatform == Device.iOS)
 				{
 					url = url.Replace("-", "+");
 					url = url.Replace("_", "=");
@@ -237,7 +237,7 @@ namespace MPayXDKExample //Update to your project namespace accordingly
 
 				url = url.Replace(mprunscriptonpopup, "");
 
-				if (Device.OS == TargetPlatform.iOS)
+				if (Device.RuntimePlatform == Device.iOS)
 				{
 					url = url.Replace("-", "+");
 					url = url.Replace("_", "=");
@@ -266,7 +266,7 @@ namespace MPayXDKExample //Update to your project namespace accordingly
 
 				url = url.Replace(mppinstructioncapture, "");
 
-				if (Device.OS == TargetPlatform.iOS)
+				if (Device.RuntimePlatform == Device.iOS)
 				{
 					url = url.Replace("-", "+");
 					url = url.Replace("_", "=");
@@ -312,7 +312,7 @@ namespace MPayXDKExample //Update to your project namespace accordingly
 
 				url = url.Replace(mpopenbankwindow, "");
 
-				if (Device.OS == TargetPlatform.iOS)
+				if (Device.RuntimePlatform == Device.iOS)
 				{
 					url = url.Replace("-", "+");
 					url = url.Replace("_", "=");
