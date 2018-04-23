@@ -51,7 +51,8 @@ This plugin provides an integrated MOLPay payment module that contains a wrapper
     For iOS,
     - Add 'NSAppTransportSecurity' > Allow Arbitrary Loads > YES' to the application project info.plist
     - Add 'NSPhotoLibraryUsageDescription' > 'Payment images' to the application project info.plist
-    
+    - Add 'NSPhotoLibraryAddUsageDescription' > 'Payment images' to the application project info.plist
+
     For Android,
     - Add DependencyService.Get<MOLPayExtension>().SetMOLPayContext(this); to the MainActivity.cs after LoadApplication(new App());
     - Check WriteExternalStorage option at the AndroidManifest.xml's Required Permission
