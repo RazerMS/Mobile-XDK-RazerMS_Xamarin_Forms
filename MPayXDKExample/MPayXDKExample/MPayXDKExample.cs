@@ -15,7 +15,7 @@ namespace MPayXDKExample
 			var closeButton = new Button();
 			closeButton.BackgroundColor = Color.Gray;
 			closeButton.Text = "Close";
-			closeButton.BorderRadius = 0;
+			closeButton.CornerRadius = 0;
 			closeButton.TextColor = Color.White;
 			closeButton.VerticalOptions = LayoutOptions.FillAndExpand;
 			closeButton.HorizontalOptions = LayoutOptions.FillAndExpand;

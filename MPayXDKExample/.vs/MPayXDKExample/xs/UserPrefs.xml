@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{17E9C2E0-09EA-485E-A665-4B5331F570E2}|Default">
+  <MonoDevelop.Ide.ItemProperties.MPayXDKExample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.372BDF8E-D368-4EDB-ABB4-6A68624BFB3F" automaticSigning="False" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/AppDelegate.cs">
+    <Files>
+      <File FileName="iOS/AppDelegate.cs" Line="24" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
