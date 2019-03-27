@@ -1,14 +1,24 @@
-﻿<Properties StartupConfiguration="{17E9C2E0-09EA-485E-A665-4B5331F570E2}|Default">
-  <MonoDevelop.Ide.ItemProperties.MPayXDKExample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.372BDF8E-D368-4EDB-ABB4-6A68624BFB3F" automaticSigning="False" />
+﻿<Properties StartupConfiguration="{F703A38E-21F7-4F55-948E-957BC1720FDA}|Default">
+  <MonoDevelop.Ide.ItemProperties.MPayXDKExample.Droid PreferredExecutionTarget="Android.GNexus8" />
   <MonoDevelop.Ide.Workbench ActiveDocument="iOS/AppDelegate.cs">
     <Files>
-      <File FileName="iOS/AppDelegate.cs" Line="24" Column="1" />
+      <File FileName="iOS/AppDelegate.cs" Line="9" Column="2" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MPayXDKExample" expanded="True">
+            <Node name="MPayXDKExample.Droid" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MPayXDKExample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.87EF6DD3-D112-423B-9CD4-94467790A0F3" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>
