@@ -8,7 +8,10 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MPayXDKExample" expanded="True">
-            <Node name="MPayXDKExample.Droid" selected="True" />
+            <Node name="MPayXDKExample.Droid" expanded="True" selected="True" />
+            <Node name="MPayXDKExample.iOS" expanded="True">
+              <Node name="Packages" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
