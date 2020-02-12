@@ -54,11 +54,11 @@ namespace MPayXDKExample
 				{ "mp_currency", "MYR" }, // Mandatory String. Payment values
 				{ "mp_country", "MY" }, // Mandatory String. Payment values
 				{ "mp_verification_key", "" }, // Mandatory String. Values obtained from MOLPay
-				{ "mp_channel", "" }, // Optional String.
-				{ "mp_bill_name", "billname" }, // Optional String.
+				{ "mp_channel", "multi" }, // Optional String.
+				{ "mp_bill_name", "name" }, // Optional String.
 				{ "mp_bill_email", "example@email.com" }, // Optional String.
 				{ "mp_bill_mobile", "+60123456789" }, // Optional String.
-				{ "mp_bill_description", "billdesc" } // Optional String.
+				{ "mp_bill_description", "description" }, // Optional String.
 				//{ "mp_channel_editing", false }, // Optional String.
 				//{ "mp_editing_enabled", false }, // Optional String.
 				//{ "mp_transaction_id", "" }, // For transaction request use only, do not use this on payment process
@@ -81,7 +81,7 @@ namespace MPayXDKExample
 				//{ "mp_bill_mobile_edit_disabled", true }, // Optional, explicitly force disable billing mobile edit.
 				//{ "mp_bill_description_edit_disabled", true } // Optional, explicitly force disable billing description edit.
 				//{ "mp_language", "EN" }, // Optional, EN, MS, VI, TH, FIL, MY, KM, ID, ZH.
-				//{ "mp_dev_mode", false } // Optional, enable for online sandbox testing.
+				{ "mp_dev_mode", true } // Optional, enable for online sandbox testing.
 			};
 
 			this.molpay = new MOLPay(DependencyService.Get<MOLPayExtension>().GetAssetPath(), paymentDetails, MolpayCallback);

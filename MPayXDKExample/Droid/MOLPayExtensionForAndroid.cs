@@ -42,13 +42,13 @@ namespace MPayXDKExample.Droid
 			System.Diagnostics.Debug.WriteLine("+++++++++++ saveImageToDevice, filename = {0}", filename);
 
 			byte[] imageAsBytes = Base64.Decode(base64ImageString, Base64Flags.Default);
-			Bitmap bitmap = BitmapFactory.DecodeByteArray(imageAsBytes, 0, imageAsBytes.Length);
+            Android.Graphics.Bitmap bitmap = BitmapFactory.DecodeByteArray(imageAsBytes, 0, imageAsBytes.Length);
 
 			var sdCardPath = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
 			var filePath = System.IO.Path.Combine(sdCardPath.ToString(), filename);
 			var stream = new FileStream(filePath, FileMode.Create);
 
-			bool compress = bitmap.Compress(Bitmap.CompressFormat.Png, 100, stream);
+			bool compress = bitmap.Compress(Android.Graphics.Bitmap.CompressFormat.Png, 100, stream);
 			stream.Close();
 
 			MediaScannerConnection.ScanFile(Application.Context, new String[] { filePath }, null, null);

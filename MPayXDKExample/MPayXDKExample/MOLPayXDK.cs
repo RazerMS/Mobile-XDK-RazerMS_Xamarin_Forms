@@ -4,6 +4,7 @@ using Xamarin.Forms;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using System.Text;
+using Xamarin.Essentials;
 
 namespace MPayXDKExample //Update to your project namespace accordingly
 {
@@ -99,7 +100,7 @@ namespace MPayXDKExample //Update to your project namespace accordingly
 			
 		}
 
-		private void OnMolpayUILoadFinish(object sender, WebNavigatedEventArgs e)
+		private async void OnMolpayUILoadFinish(object sender, WebNavigatedEventArgs e)
 		{
 			if (isInternalDebugging)
 			{
@@ -118,6 +119,23 @@ namespace MPayXDKExample //Update to your project namespace accordingly
 				// Override popup
 				string evaljs = "window.open = function (open) { return function (url, name, features) { window.location = url ; return window; };  } (window.open);";
 				this.molpayUI.Eval(evaljs);
+			}
+			if (url.Contains("intermediate_appTNG-EWALLET.php"))
+			{
+				if (isInternalDebugging)
+				{
+					System.Diagnostics.Debug.WriteLine("+++++++++++ tngdurl found");
+				}
+
+				string result = await this.molpayUI.EvaluateJavaScriptAsync($"document.getElementById('systembrowserurl').innerHTML");
+				string decodedResult = Base64Decode(result);
+				System.Diagnostics.Debug.WriteLine("+++++++++++ systembrowserurl, result = {0}", decodedResult);
+
+				Uri uri = new Uri(decodedResult, UriKind.Absolute);
+				System.Diagnostics.Debug.WriteLine("+++++++++++ uri = {0}", uri);
+
+				if (await Launcher.CanOpenAsync(uri))
+					await Launcher.OpenAsync(uri);
 			}
 		}
 
