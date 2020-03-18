@@ -45,15 +45,15 @@ namespace MPayXDKExample
 			var paymentDetails = new Dictionary<string, object>
 			{
 				// ------- SDK required data ----------
-				{ "mp_amount", "1.10" }, // Mandatory String. A value more than '1.00'
-				{ "mp_username", "SB_molpayxdk" }, // Mandatory String. Values obtained from MOLPay
-				{ "mp_password", "cT54#Lk@22" }, // Mandatory String. Values obtained from MOLPay
-				{ "mp_merchant_ID", "SB_molpayxdk" }, // Mandatory String. Values obtained from MOLPay
-				{ "mp_app_name", "molpayxdk" }, // Mandatory String. Values obtained from MOLPay
-				{ "mp_order_ID", "123" }, // Mandatory String. Payment values
+				{ "mp_amount", "" }, // Mandatory String. A value more than '1.00'
+				{ "mp_username", "" }, // Mandatory String. Values obtained from MOLPay
+				{ "mp_password", "" }, // Mandatory String. Values obtained from MOLPay
+				{ "mp_merchant_ID", "" }, // Mandatory String. Values obtained from MOLPay
+				{ "mp_app_name", "" }, // Mandatory String. Values obtained from MOLPay
+				{ "mp_order_ID", "" }, // Mandatory String. Payment values
 				{ "mp_currency", "MYR" }, // Mandatory String. Payment values
 				{ "mp_country", "MY" }, // Mandatory String. Payment values
-				{ "mp_verification_key", "4445db44bdb60687a8e7f7903a59c3a9" }, // Mandatory String. Values obtained from MOLPay
+				{ "mp_verification_key", "" }, // Mandatory String. Values obtained from MOLPay
 				{ "mp_channel", "multi" }, // Optional String.
 				{ "mp_bill_name", "name" }, // Optional String.
 				{ "mp_bill_email", "example@email.com" }, // Optional String.
