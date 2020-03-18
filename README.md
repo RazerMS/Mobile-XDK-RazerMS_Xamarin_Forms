@@ -2,13 +2,13 @@
 # license: Copyright © 2011-2019 MOLPay Sdn Bhd. All Rights Reserved. 
 -->
 
-<img src="https://user-images.githubusercontent.com/38641542/39353138-654385dc-4a39-11e8-9710-19e5f03ec62e.jpg">
-
 # rms-mobile-xdk-xamarin-forms
+
+<img src="https://user-images.githubusercontent.com/38641542/74424311-a9d64000-4e8c-11ea-8d80-d811cfe66972.jpg">
 
 This is the complete and functional Razer Merchant Services Xamarin Forms payment module that is ready to be implemented into Xamarin Forms project through simple copy and paste procedures. An example application project (MPayXDKExample) is provided for MOLPayXDK Xamarin Forms integration reference.
 
-This plugin provides an integrated MOLPay payment module that contains a wrapper 'MOLPayXDK.cs' and an upgradable core as the 'molpay-mobile-xdk-www' folder, which the latter can be separately downloaded at https://github.com/MOLPay/rms-mobile-xdk-www and update the local version.
+This plugin provides an integrated MOLPay payment module that contains a wrapper 'MOLPayXDK.cs' and an upgradable core as the 'molpay-mobile-xdk-www' folder, which the latter can be separately downloaded at https://github.com/RazerMS/rms-mobile-xdk-www and update the local version.
 
 ## Recommended configurations
 
@@ -94,7 +94,7 @@ This plugin provides an integrated MOLPay payment module that contains a wrapper
     
     Parameter and meaning:
     
-    "Communication Error" - Error starting a payment process due to several possible reasons, please contact MOLPay support should the error persists.
+    "Communication Error" - Error starting a payment process due to several possible reasons, please contact Razer Merchant Services support should the error persists.
     1) Internet not available
     2) API credentials (username, password, merchant id, verify key)
     3) MOLPay server offline.
@@ -118,7 +118,7 @@ This plugin provides an integrated MOLPay payment module that contains a wrapper
         { "mp_country", "MY" },  
             
         // Optional String.
-        { "mp_channel", "" }, // Use 'multi' for all available channels option. For individual channel seletion, please refer to https://github.com/MOLPay/molpay-mobile-xdk-examples/blob/master/channel_list.tsv.
+        { "mp_channel", "" }, // Use 'multi' for all available channels option. For individual channel seletion, please refer to https://github.com/RazerMS/rms-mobile-xdk-examples/blob/master/channel_list.tsv.
         { "mp_bill_description", "" },
         { "mp_bill_name", "" },
         { "mp_bill_email", "" },
@@ -228,12 +228,12 @@ This plugin provides an integrated MOLPay payment module that contains a wrapper
 
 ## Support
 
-Submit issue to this repository or email to our support@molpay.com
+Submit issue to this repository or email to our support-sa@razer.com
 
-Merchant Technical Support / Customer Care : support@molpay.com<br>
-Sales/Reseller Enquiry : sales@molpay.com<br>
-Marketing Campaign : marketing@molpay.com<br>
-Channel/Partner Enquiry : channel@molpay.com<br>
-Media Contact : media@molpay.com<br>
-R&D and Tech-related Suggestion : technical@molpay.com<br>
-Abuse Reporting : abuse@molpay.com
+Merchant Technical Support / Customer Care : support-sa@razer.com<br>
+Sales/Reseller Enquiry : sales-sa@razer.com<br>
+Marketing Campaign : marketing-sa@razer.com<br>
+Channel/Partner Enquiry : channel-sa@razer.com<br>
+Media Contact : media-sa@razer.com<br>
+R&D and Tech-related Suggestion : technical-sa@razer.com<br>
+Abuse Reporting : abuse-sa@razer.com
