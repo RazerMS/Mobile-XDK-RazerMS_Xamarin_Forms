@@ -20,7 +20,7 @@ namespace MPayXDKExample //Update to your project namespace accordingly
 		// deploy
 		private bool isInternalDebugging = false;
 		private const string moduleId = "molpay-mobile-xdk-xamarin";
-		private const string wrapperVersion = "0";
+		private const string wrapperVersion = "1";
 		private const string molpaySdkUrl = "molpay-mobile-xdk-www/index.html";
 		private const string mpopenmolpaywindow = "mpopenmolpaywindow://";
 		private const string mptransactionresults = "mptransactionresults://";
@@ -120,7 +120,7 @@ namespace MPayXDKExample //Update to your project namespace accordingly
 				string evaljs = "window.open = function (open) { return function (url, name, features) { window.location = url ; return window; };  } (window.open);";
 				this.molpayUI.Eval(evaljs);
 			}
-			if (url.Contains("intermediate_appTNG-EWALLET.php"))
+			if (url.Contains("intermediate_appTNG-EWALLET.php") || url.Contains("intermediate_app/processing.php"))
 			{
 				if (isInternalDebugging)
 				{
