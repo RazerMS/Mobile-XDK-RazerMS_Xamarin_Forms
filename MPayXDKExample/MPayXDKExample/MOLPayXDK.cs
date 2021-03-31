@@ -20,7 +20,7 @@ namespace MPayXDKExample //Update to your project namespace accordingly
 		// deploy
 		private bool isInternalDebugging = false;
 		private const string moduleId = "molpay-mobile-xdk-xamarin";
-		private const string wrapperVersion = "1";
+		private const string wrapperVersion = "0";
 		private const string molpaySdkUrl = "molpay-mobile-xdk-www/index.html";
 		private const string mpopenmolpaywindow = "mpopenmolpaywindow://";
 		private const string mptransactionresults = "mptransactionresults://";

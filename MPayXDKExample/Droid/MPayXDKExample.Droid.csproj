@@ -220,9 +220,12 @@
     <AndroidAsset Include="Assets\molpay-mobile-xdk-www\images\ImageUnavailable.png" />
     <AndroidAsset Include="Assets\molpay-mobile-xdk-www\images\poweredByMOLPay.png" />
     <AndroidAsset Include="Assets\molpay-mobile-xdk-www\styles\vendor.34eb91d2.css" />
-    <AndroidAsset Include="Assets\molpay-mobile-xdk-www\styles\main.0855bf84.css" />
-    <AndroidAsset Include="Assets\molpay-mobile-xdk-www\scripts\vendor.0f03d7b3.js" />
-    <AndroidAsset Include="Assets\molpay-mobile-xdk-www\scripts\scripts.f3d4a10f.js" />
+    <AndroidAsset Include="Assets\molpay-mobile-xdk-www\scripts\scripts.e7adf302.js" />
+    <AndroidAsset Include="Assets\molpay-mobile-xdk-www\scripts\vendor.683ba06a.js" />
+    <AndroidAsset Include="Assets\molpay-mobile-xdk-www\styles\main.0ca151a6.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\molpay-mobile-xdk-www\scripts\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Arch.Core.Common.1.1.1.3\build\monoandroid90\Xamarin.Android.Arch.Core.Common.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Core.Common.1.1.1.3\build\monoandroid90\Xamarin.Android.Arch.Core.Common.targets')" />

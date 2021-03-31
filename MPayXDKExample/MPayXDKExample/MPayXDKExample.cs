@@ -45,12 +45,12 @@ namespace MPayXDKExample
 			var paymentDetails = new Dictionary<string, object>
 			{
 				// ------- SDK required data ----------
-				{ "mp_amount", "" }, // Mandatory String. A value more than '1.00'
+				{ "mp_amount", "1.01" }, // Mandatory String. A value more than '1.00'
 				{ "mp_username", "" }, // Mandatory String. Values obtained from MOLPay
 				{ "mp_password", "" }, // Mandatory String. Values obtained from MOLPay
 				{ "mp_merchant_ID", "" }, // Mandatory String. Values obtained from MOLPay
 				{ "mp_app_name", "" }, // Mandatory String. Values obtained from MOLPay
-				{ "mp_order_ID", "" }, // Mandatory String. Payment values
+				{ "mp_order_ID", "xamarin form" }, // Mandatory String. Payment values
 				{ "mp_currency", "MYR" }, // Mandatory String. Payment values
 				{ "mp_country", "MY" }, // Mandatory String. Payment values
 				{ "mp_verification_key", "" }, // Mandatory String. Values obtained from MOLPay
@@ -91,7 +91,8 @@ namespace MPayXDKExample
 			// The root page of your application
 			MainPage = new ContentPage
 			{
-				Content = this.mainLayout
+				Content = this.mainLayout,
+				Title = "RMSXDKExample"
 			};
 
 		}
