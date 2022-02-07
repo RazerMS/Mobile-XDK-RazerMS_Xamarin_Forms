@@ -2,7 +2,7 @@
 # license: Copyright © 2011-2019 MOLPay Sdn Bhd. All Rights Reserved. 
 -->
 
-# rms-mobile-xdk-xamarin-forms
+# [Mobile XDK] – RazerMS Xamarin Forms
 
 <img src="https://user-images.githubusercontent.com/38641542/74424311-a9d64000-4e8c-11ea-8d80-d811cfe66972.jpg">
 
@@ -12,13 +12,13 @@ This plugin provides an integrated MOLPay payment module that contains a wrapper
 
 ## Recommended configurations
 
-    - Xamarin Studio Version: 6 ++ (For Mac)
+- Xamarin Studio Version: 6 ++ (For Mac)
     
-    - Microsoft Visual Studio 2015 (v14) (For Windows)
+- Microsoft Visual Studio 2015 (v14) (For Windows)
     
-    - Minimum Android target version: Android 4.4
+- Minimum Android target version: Android 4.4
     
-    - Minimum iOS target version: 7.0
+- Minimum iOS target version: 7.0
 
 ## Installation Guidance
 
